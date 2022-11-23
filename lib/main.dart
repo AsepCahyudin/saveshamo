@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         child: Text(
           'Saya Sukses',
           style: GoogleFonts.poppins(
-            fontSize: 60,
+            fontSize: 50,
           ),
         ),
       ),
