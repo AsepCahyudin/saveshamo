@@ -1,7 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    Timer(
+      Duration(seconds: 3),
+      () => Navigator.pushNamed(context, '/sign-in'),
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
