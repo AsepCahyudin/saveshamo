@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 
-class SignInPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -11,7 +11,7 @@ class SignInPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Login',
+                'Sign Up',
                 style: primaryTextStyle.copyWith(
                   fontSize: 24,
                   fontWeight: semiBold,
@@ -21,7 +21,7 @@ class SignInPage extends StatelessWidget {
                 height: 2,
               ),
               Text(
-                'Sign In to Continue',
+                'Register ans Happy Shopping',
                 style: subtitleTextStyle,
               )
             ],
@@ -145,16 +145,11 @@ class SignInPage extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/sign-up');
-              },
-              child: Text(
-                'Sign Up',
-                style: purpleTextStyle.copyWith(
-                  fontSize: 12,
-                  fontWeight: medium,
-                ),
+            Text(
+              'Sign Up',
+              style: purpleTextStyle.copyWith(
+                fontSize: 12,
+                fontWeight: medium,
               ),
             ),
           ],
