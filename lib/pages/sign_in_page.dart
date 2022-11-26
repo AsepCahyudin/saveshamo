@@ -122,13 +122,44 @@ class SignInPage extends StatelessWidget {
               backgroundColor: primaryColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12))),
-          child: Text('Sign In'),
+          child: Text(
+            'Sign In',
+            style: primaryTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: medium,
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget footer() {
+      return Container(
+        margin: EdgeInsets.only(bottom: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Don\'t have an account? ',
+              style: subtitleTextStyle.copyWith(
+                fontSize: 12,
+              ),
+            ),
+            Text(
+              'Sign Up',
+              style: purpleTextStyle.copyWith(
+                fontSize: 12,
+                fontWeight: medium,
+              ),
+            ),
+          ],
         ),
       );
     }
 
     return Scaffold(
       backgroundColor: backgroundColor1,
+      resizeToAvoidBottomInset: false,
       body: Container(
         margin: EdgeInsets.symmetric(
           horizontal: defaultMargin,
@@ -140,6 +171,8 @@ class SignInPage extends StatelessWidget {
             emailInput(),
             passwordInput(),
             signInButton(),
+            Spacer(),
+            footer(),
           ],
         ),
       ),
