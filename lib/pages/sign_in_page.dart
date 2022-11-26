@@ -98,6 +98,7 @@ class SignInPage extends StatelessWidget {
                 Expanded(
                     child: TextFormField(
                   style: primaryTextStyle,
+                  obscureText: true,
                   decoration: InputDecoration.collapsed(
                     hintText: 'Your Password',
                     hintStyle: subtitleTextStyle,
@@ -107,6 +108,22 @@ class SignInPage extends StatelessWidget {
             )),
           )
         ]),
+      );
+    }
+
+    Widget signInButton() {
+      return Container(
+        height: 50,
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 30),
+        child: TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+              backgroundColor: primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12))),
+          child: Text('Sign In'),
+        ),
       );
     }
 
@@ -122,6 +139,7 @@ class SignInPage extends StatelessWidget {
             header(),
             emailInput(),
             passwordInput(),
+            signInButton(),
           ],
         ),
       ),
