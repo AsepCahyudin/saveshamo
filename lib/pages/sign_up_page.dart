@@ -28,11 +28,11 @@ class SignUpPage extends StatelessWidget {
           ));
     }
 
-    Widget emailInput() {
+    Widget nameInput() {
       return Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: EdgeInsets.only(top: 50),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('Email Address',
+          Text('Fullname',
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium)),
           SizedBox(
@@ -48,7 +48,7 @@ class SignUpPage extends StatelessWidget {
                 child: Row(
               children: [
                 Image.asset(
-                  'assets/Email_Icon.png',
+                  'assets/Fullname_Icon.png',
                   width: 17,
                 ),
                 SizedBox(
@@ -58,7 +58,7 @@ class SignUpPage extends StatelessWidget {
                     child: TextFormField(
                   style: primaryTextStyle,
                   decoration: InputDecoration.collapsed(
-                    hintText: 'Your Email Address',
+                    hintText: 'Your Fullname',
                     hintStyle: subtitleTextStyle,
                   ),
                 ))
@@ -168,7 +168,7 @@ class SignUpPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             header(),
-            emailInput(),
+            nameInput(),
             passwordInput(),
             signInButton(),
             Spacer(),
