@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     Widget cartButton() {
@@ -26,6 +33,13 @@ class MainPage extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: BottomNavigationBar(
               backgroundColor: backgroundColor4,
+              currentIndex: currentIndex,
+              onTap: (value) {
+                print(value);
+                setState(() {
+                  currentIndex = value;
+                });
+              },
               type: BottomNavigationBarType.fixed,
               items: [
                 BottomNavigationBarItem(
