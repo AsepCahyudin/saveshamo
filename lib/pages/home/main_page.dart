@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
         ),
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
-          notchMargin: 10,
+          notchMargin: 16,
           clipBehavior: Clip.antiAlias,
           child: BottomNavigationBar(
               backgroundColor: backgroundColor4,
@@ -47,34 +47,50 @@ class _MainPageState extends State<MainPage> {
               type: BottomNavigationBarType.fixed,
               items: [
                 BottomNavigationBarItem(
-                  icon: Image.asset(
-                    'assets/Home.png',
-                    width: 21,
-                    color: currentIndex == 0 ? primaryColor : Color(0xff808191),
+                  icon: Container(
+                    margin: EdgeInsets.only(bottom: 20, top: 20),
+                    child: Image.asset(
+                      'assets/Home.png',
+                      width: 21,
+                      color:
+                          currentIndex == 0 ? primaryColor : Color(0xff808191),
+                    ),
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Image.asset(
-                    'assets/Chat_Icon.png',
-                    width: 21,
-                    color: currentIndex == 1 ? primaryColor : Color(0xff808191),
+                  icon: Container(
+                    margin: EdgeInsets.only(bottom: 20, top: 20, right: 40),
+                    child: Image.asset(
+                      'assets/Chat_Icon.png',
+                      width: 21,
+                      color:
+                          currentIndex == 1 ? primaryColor : Color(0xff808191),
+                    ),
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Image.asset(
-                    'assets/Favorite_Icon.png',
-                    width: 20,
-                    color: currentIndex == 2 ? primaryColor : Color(0xff808191),
+                  icon: Container(
+                    margin: EdgeInsets.only(bottom: 20, top: 20, left: 40),
+                    child: Image.asset(
+                      'assets/Favorite_Icon.png',
+                      width: 20,
+                      color:
+                          currentIndex == 2 ? primaryColor : Color(0xff808191),
+                    ),
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Image.asset(
-                    'assets/Profile.png',
-                    width: 18,
-                    color: currentIndex == 3 ? primaryColor : Color(0xff808191),
+                  icon: Container(
+                    margin: EdgeInsets.only(bottom: 20, top: 20),
+                    child: Image.asset(
+                      'assets/Profile.png',
+                      width: 18,
+                      color:
+                          currentIndex == 3 ? primaryColor : Color(0xff808191),
+                    ),
                   ),
                   label: '',
                 ),
