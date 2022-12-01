@@ -4,11 +4,27 @@ import 'package:saveshamo/theme.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Home Page',
-        style: primaryTextStyle,
-      ),
+    Widget header() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
+        child: Row(
+          children: [
+            Column(
+              children: [Text('Hallo, Save')],
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ListView(
+      children: [
+        header(),
+      ],
     );
   }
 }
