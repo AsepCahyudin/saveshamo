@@ -13,23 +13,25 @@ class HomePage extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hallo, Save',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 24,
-                    fontWeight: semiBold,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hallo, Save',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 24,
+                      fontWeight: semiBold,
+                    ),
                   ),
-                ),
-                Text(
-                  '@savefaaizuun',
-                  style: subtitleTextStyle.copyWith(
-                    fontSize: 16,
-                  ),
-                )
-              ],
+                  Text(
+                    '@savefaaizuun',
+                    style: subtitleTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  )
+                ],
+              ),
             ),
             Container(
               width: 54,
