@@ -48,9 +48,39 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget categories() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+        ),
+        child: Row(
+          children: [
+            SizedBox(
+              width: defaultMargin,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: primaryColor,
+              ),
+              child: Text(
+                'All Shoes',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 13,
+                  fontWeight: medium,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
+        categories(),
       ],
     );
   }
