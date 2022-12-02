@@ -60,6 +60,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              margin: EdgeInsets.only(right: 16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: primaryColor,
@@ -67,6 +68,24 @@ class HomePage extends StatelessWidget {
               child: Text(
                 'All Shoes',
                 style: primaryTextStyle.copyWith(
+                  fontSize: 13,
+                  fontWeight: medium,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              margin: EdgeInsets.only(right: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: subtitleColor,
+                ),
+                color: transparentColor,
+              ),
+              child: Text(
+                'Running',
+                style: subtitleTextStyle.copyWith(
                   fontSize: 13,
                   fontWeight: medium,
                 ),
