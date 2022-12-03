@@ -27,74 +27,80 @@ class _MainPageState extends State<MainPage> {
     }
 
     Widget customBottomnNav() {
-      return ClipRRect(
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(30),
-        ),
-        child: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          notchMargin: 16,
-          clipBehavior: Clip.antiAlias,
-          child: BottomNavigationBar(
-              backgroundColor: backgroundColor4,
-              currentIndex: currentIndex,
-              onTap: (value) {
-                print(value);
-                setState(() {
-                  currentIndex = value;
-                });
-              },
-              type: BottomNavigationBarType.fixed,
-              items: [
-                BottomNavigationBarItem(
-                  icon: Container(
-                    margin: EdgeInsets.only(bottom: 20, top: 20),
-                    child: Image.asset(
-                      'assets/Home.png',
-                      width: 21,
-                      color:
-                          currentIndex == 0 ? primaryColor : Color(0xff808191),
+      return Container(
+        child: ClipRRect(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(30),
+          ),
+          child: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            notchMargin: 16,
+            clipBehavior: Clip.antiAlias,
+            child: BottomNavigationBar(
+                backgroundColor: backgroundColor4,
+                currentIndex: currentIndex,
+                onTap: (value) {
+                  print(value);
+                  setState(() {
+                    currentIndex = value;
+                  });
+                },
+                type: BottomNavigationBarType.fixed,
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Container(
+                      margin: EdgeInsets.only(bottom: 20, top: 20),
+                      child: Image.asset(
+                        'assets/Home.png',
+                        width: 21,
+                        color: currentIndex == 0
+                            ? primaryColor
+                            : Color(0xff808191),
+                      ),
                     ),
+                    label: '',
                   ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Container(
-                    margin: EdgeInsets.only(bottom: 20, top: 20, right: 40),
-                    child: Image.asset(
-                      'assets/Chat_Icon.png',
-                      width: 21,
-                      color:
-                          currentIndex == 1 ? primaryColor : Color(0xff808191),
+                  BottomNavigationBarItem(
+                    icon: Container(
+                      margin: EdgeInsets.only(bottom: 20, top: 20, right: 40),
+                      child: Image.asset(
+                        'assets/Chat_Icon.png',
+                        width: 21,
+                        color: currentIndex == 1
+                            ? primaryColor
+                            : Color(0xff808191),
+                      ),
                     ),
+                    label: '',
                   ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Container(
-                    margin: EdgeInsets.only(bottom: 20, top: 20, left: 40),
-                    child: Image.asset(
-                      'assets/Favorite_Icon.png',
-                      width: 20,
-                      color:
-                          currentIndex == 2 ? primaryColor : Color(0xff808191),
+                  BottomNavigationBarItem(
+                    icon: Container(
+                      margin: EdgeInsets.only(bottom: 20, top: 20, left: 40),
+                      child: Image.asset(
+                        'assets/Favorite_Icon.png',
+                        width: 20,
+                        color: currentIndex == 2
+                            ? primaryColor
+                            : Color(0xff808191),
+                      ),
                     ),
+                    label: '',
                   ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Container(
-                    margin: EdgeInsets.only(bottom: 20, top: 20),
-                    child: Image.asset(
-                      'assets/Profile.png',
-                      width: 18,
-                      color:
-                          currentIndex == 3 ? primaryColor : Color(0xff808191),
+                  BottomNavigationBarItem(
+                    icon: Container(
+                      margin: EdgeInsets.only(bottom: 20, top: 20),
+                      child: Image.asset(
+                        'assets/Profile.png',
+                        width: 18,
+                        color: currentIndex == 3
+                            ? primaryColor
+                            : Color(0xff808191),
+                      ),
                     ),
+                    label: '',
                   ),
-                  label: '',
-                ),
-              ]),
+                ]),
+          ),
         ),
       );
     }
