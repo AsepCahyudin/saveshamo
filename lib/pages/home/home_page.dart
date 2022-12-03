@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
+import 'package:saveshamo/widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -167,11 +168,35 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget popularProducts() {
+      return Container(
+        margin: EdgeInsets.only(top: 14),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(
+                width: defaultMargin,
+              ),
+              Row(
+                children: [
+                  ProductCard(),
+                  ProductCard(),
+                  ProductCard(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
         categories(),
         popularProductsTitle(),
+        popularProducts(),
       ],
     );
   }
