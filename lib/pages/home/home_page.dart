@@ -205,6 +205,15 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget newArrivals() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 14,
+        ),
+        child: Column(),
+      );
+    }
+
     return ListView(
       children: [
         header(),
