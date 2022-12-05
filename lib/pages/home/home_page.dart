@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 import 'package:saveshamo/widgets/product_card.dart';
+import 'package:saveshamo/widgets/product_tile.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -210,7 +211,14 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.only(
           top: 14,
         ),
-        child: Column(),
+        child: Column(
+          children: [
+            ProductTile(),
+            ProductTile(),
+            ProductTile(),
+            ProductTile(),
+          ],
+        ),
       );
     }
 
@@ -221,6 +229,7 @@ class HomePage extends StatelessWidget {
         popularProductsTitle(),
         popularProducts(),
         newArrivalsTitle(),
+        newArrivals(),
       ],
     );
   }
