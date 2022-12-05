@@ -15,6 +15,20 @@ class ChatPage extends StatelessWidget {
             fontWeight: medium,
           ),
         ),
+        elevation: 0,
+        automaticallyImplyLeading: false,
+      );
+    }
+
+    Widget content() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          color: backgroundColor3,
+          child: Column(
+            children: [],
+          ),
+        ),
       );
     }
 
