@@ -32,6 +32,7 @@ class ChatTile extends StatelessWidget {
                       style: secondaryTextStyle.copyWith(
                         fontWeight: light,
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -39,8 +40,13 @@ class ChatTile extends StatelessWidget {
               Text(
                 'Now',
                 style: secondaryTextStyle.copyWith(fontSize: 10),
-              )
+              ),
             ],
+          ),
+          SizedBox(height: 12),
+          Divider(
+            thickness: 1,
+            color: Color(0xff2B2939),
           ),
         ],
       ),
