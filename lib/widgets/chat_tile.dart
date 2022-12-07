@@ -4,51 +4,56 @@ import 'package:saveshamo/theme.dart';
 class ChatTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 33),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Image.asset(
-                'assets/Image_Shop_Logo.png',
-                width: 54,
-              ),
-              SizedBox(
-                width: 12,
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Shoe Store',
-                      style: primaryTextStyle.copyWith(
-                        fontSize: 15,
-                      ),
-                    ),
-                    Text(
-                      'Good night, This item is on ...',
-                      style: secondaryTextStyle.copyWith(
-                        fontWeight: light,
-                      ),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/detail_chat');
+      },
+      child: Container(
+        margin: EdgeInsets.only(top: 33),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/Image_Shop_Logo.png',
+                  width: 54,
                 ),
-              ),
-              Text(
-                'Now',
-                style: secondaryTextStyle.copyWith(fontSize: 10),
-              ),
-            ],
-          ),
-          SizedBox(height: 12),
-          Divider(
-            thickness: 1,
-            color: Color(0xff2B2939),
-          ),
-        ],
+                SizedBox(
+                  width: 12,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Shoe Store',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        'Good night, This item is on ...',
+                        style: secondaryTextStyle.copyWith(
+                          fontWeight: light,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  'Now',
+                  style: secondaryTextStyle.copyWith(fontSize: 10),
+                ),
+              ],
+            ),
+            SizedBox(height: 12),
+            Divider(
+              thickness: 1,
+              color: Color(0xff2B2939),
+            ),
+          ],
+        ),
       ),
     );
   }
