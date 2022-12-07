@@ -6,7 +6,7 @@ class ChatTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/detail_chat');
+        Navigator.pushNamed(context, '/detail-chat');
       },
       child: Container(
         margin: EdgeInsets.only(top: 33),
