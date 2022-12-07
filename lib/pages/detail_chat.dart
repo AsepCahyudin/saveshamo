@@ -6,8 +6,41 @@ class DetailChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
       return PreferredSize(
-        child: AppBar(),
-        preferredSize: Size.fromHeight(90),
+        preferredSize: Size.fromHeight(70),
+        child: AppBar(
+          backgroundColor: backgroundColor1,
+          centerTitle: false,
+          title: Row(
+            children: [
+              Image.asset(
+                'assets/Logo_Online.png',
+                width: 50,
+              ),
+              SizedBox(
+                width: 12,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Shoe Store',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  Text(
+                    'Online',
+                    style: secondaryTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 14,
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       );
     }
 
