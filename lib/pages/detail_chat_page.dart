@@ -44,37 +44,68 @@ class DetailChatPage extends StatelessWidget {
       );
     }
 
+    productPreview() {
+      return Container(
+        width: 225,
+        height: 74,
+        margin: EdgeInsets.only(bottom: 20),
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: backgroundColor5,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: primaryColor,
+          ),
+        ),
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/Image_Shoes.png',
+              width: 54,
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget chatinput() {
       return Container(
         margin: EdgeInsets.all(20),
-        child: Row(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: Container(
-                height: 45,
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                ),
-                decoration: BoxDecoration(
-                  color: backgroundColor4,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Center(
-                  child: TextFormField(
-                    decoration: InputDecoration.collapsed(
-                      hintText: 'Type Message',
-                      hintStyle: subtitleTextStyle,
+            productPreview(),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 45,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                    ),
+                    decoration: BoxDecoration(
+                      color: backgroundColor4,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: TextFormField(
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Type Message',
+                          hintStyle: subtitleTextStyle,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            Image.asset(
-              'assets/Send_Button.png',
-              width: 45,
+                SizedBox(
+                  width: 20,
+                ),
+                Image.asset(
+                  'assets/Send_Button.png',
+                  width: 45,
+                ),
+              ],
             ),
           ],
         ),
