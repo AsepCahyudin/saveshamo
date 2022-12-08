@@ -58,6 +58,7 @@ class DetailChatPage extends StatelessWidget {
           ),
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
@@ -69,24 +70,31 @@ class DetailChatPage extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'COURT VISIO...',
-                  style: primaryTextStyle,
-                ),
-                SizedBox(
-                  height: 2,
-                ),
-                Text(
-                  '\$59.32',
-                  style: priceTextStyle.copyWith(
-                    fontWeight: medium,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'COURT VISIO...',
+                    style: primaryTextStyle,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                )
-              ],
+                  SizedBox(
+                    height: 2,
+                  ),
+                  Text(
+                    '\$59.32',
+                    style: priceTextStyle.copyWith(
+                      fontWeight: medium,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Image.asset(
+              'assets/Close_Button.png',
+              width: 22,
             ),
           ],
         ),
