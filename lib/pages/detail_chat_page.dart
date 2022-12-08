@@ -59,9 +59,34 @@ class DetailChatPage extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image.asset(
-              'assets/Image_Shoes.png',
-              width: 54,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                'assets/Image_Shoes.png',
+                width: 54,
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'COURT VISIO...',
+                  style: primaryTextStyle,
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  '\$59.32',
+                  style: priceTextStyle.copyWith(
+                    fontWeight: medium,
+                  ),
+                )
+              ],
             ),
           ],
         ),
