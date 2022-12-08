@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saveshamo/pages/detail_chat.dart';
+import 'package:saveshamo/pages/detail_chat_page.dart';
 import 'package:saveshamo/pages/home/main_page.dart';
 import 'package:saveshamo/pages/sign_in_page.dart';
 import 'package:saveshamo/pages/sign_up_page.dart';
