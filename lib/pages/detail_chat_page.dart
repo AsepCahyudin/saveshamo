@@ -53,7 +53,6 @@ class DetailChatPage extends StatelessWidget {
               height: 45,
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
-                vertical: 12,
               ),
               decoration: BoxDecoration(
                 color: backgroundColor4,
@@ -61,10 +60,16 @@ class DetailChatPage extends StatelessWidget {
               ),
               child: Center(
                 child: TextFormField(
-                  decoration: InputDecoration(hintText: 'Type Message'),
+                  decoration: InputDecoration.collapsed(
+                    hintText: 'Type Message',
+                    hintStyle: subtitleTextStyle,
+                  ),
                 ),
               ),
             ),
+          ),
+          SizedBox(
+            width: 20,
           ),
         ]),
       );
