@@ -152,7 +152,14 @@ class DetailChatPage extends StatelessWidget {
           horizontal: defaultMargin,
         ),
         children: [
-          ChatBubble(),
+          ChatBubble(
+            isSender: true,
+            text: 'Hi, This item si still available?',
+          ),
+          ChatBubble(
+            isSender: false,
+            text: 'Good night, this item is only available in size 42',
+          ),
         ],
       );
     }
