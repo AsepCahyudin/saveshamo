@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
+import 'package:saveshamo/widgets/chat_bubble.dart';
 
 class DetailChatPage extends StatelessWidget {
   @override
@@ -150,7 +151,9 @@ class DetailChatPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(
           horizontal: defaultMargin,
         ),
-        children: [],
+        children: [
+          ChatBubble(),
+        ],
       );
     }
 
