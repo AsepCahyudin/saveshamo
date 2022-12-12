@@ -13,10 +13,14 @@ class ChatBubble extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.only(top: 30),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment:
+            isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
         children: [
           Flexible(
             child: Container(
+              constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width * 0.6,
+              ),
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
                 vertical: 12,
