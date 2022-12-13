@@ -12,7 +12,6 @@ class ChatBubble extends StatelessWidget {
     Widget productPreview() {
       return Container(
         width: 230,
-        height: 155,
         margin: EdgeInsets.only(bottom: 12),
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -57,6 +56,35 @@ class ChatBubble extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                      color: primaryColor,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'Add to Cart',
+                    style: purpleTextStyle,
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Buy Now'),
                 ),
               ],
             )
