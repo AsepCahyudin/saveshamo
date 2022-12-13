@@ -5,8 +5,9 @@ import 'package:saveshamo/theme.dart';
 class ChatBubble extends StatelessWidget {
   final String text;
   final bool isSender;
+  final bool hasProduct;
 
-  ChatBubble({this.isSender = false, this.text = ''});
+  ChatBubble({this.isSender = false, this.text = '', this.hasProduct = false});
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +117,7 @@ class ChatBubble extends StatelessWidget {
         crossAxisAlignment:
             isSender ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          productPreview(),
+          hasProduct ? productPreview() : SizedBox(),
           Row(
             mainAxisAlignment:
                 isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
