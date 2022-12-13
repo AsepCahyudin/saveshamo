@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:saveshamo/theme.dart';
 
 class ChatBubble extends StatelessWidget {
@@ -64,19 +65,22 @@ class ChatBubble extends StatelessWidget {
             ),
             Row(
               children: [
-                OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(
-                      color: primaryColor,
+                Container(
+                  margin: EdgeInsets.only(right: 10),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: primaryColor,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                    child: Text(
+                      'Add to Cart',
+                      style: purpleTextStyle,
                     ),
-                  ),
-                  child: Text(
-                    'Add to Cart',
-                    style: purpleTextStyle,
                   ),
                 ),
                 SizedBox(
@@ -84,7 +88,19 @@ class ChatBubble extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Buy Now'),
+                  style: TextButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'Buy Now',
+                    style: GoogleFonts.poppins(
+                      color: backgroundColor5,
+                      fontWeight: medium,
+                    ),
+                  ),
                 ),
               ],
             )
