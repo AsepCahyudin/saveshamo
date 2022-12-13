@@ -35,6 +35,29 @@ class ChatBubble extends StatelessWidget {
                     width: 70,
                   ),
                 ),
+                SizedBox(
+                  width: 8,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'CURT VISION 2.0 SHOES',
+                        style: primaryTextStyle,
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        '\$58.34',
+                        style: priceTextStyle.copyWith(
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             )
           ],
