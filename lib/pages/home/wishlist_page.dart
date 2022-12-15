@@ -28,6 +28,39 @@ class WishlistPage extends StatelessWidget {
                 'assets/Love_Icon.png',
                 width: 74,
               ),
+              SizedBox(
+                height: 23,
+              ),
+              Text(
+                'You don\'t have dream shoes?',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: medium,
+                ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Text(
+                'Let\'s find your favorite shoes',
+                style: secondaryTextStyle,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 44,
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 24,
+                    ),
+                  ),
+                  child: Text('Explore Store'),
+                ),
+              ),
             ],
           ),
         ),
