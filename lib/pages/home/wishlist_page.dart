@@ -77,6 +77,12 @@ class WishlistPage extends StatelessWidget {
       );
     }
 
+    Widget content() {
+      return Expanded(
+        child: Container(),
+      );
+    }
+
     return Column(
       children: [
         header(),
