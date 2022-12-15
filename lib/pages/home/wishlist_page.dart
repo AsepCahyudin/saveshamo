@@ -16,9 +16,28 @@ class WishlistPage extends StatelessWidget {
       );
     }
 
+    Widget emptyWishlist() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          color: backgroundColor3,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/Love_Icon.png',
+                width: 74,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Column(
       children: [
         header(),
+        emptyWishlist(),
       ],
     );
   }
