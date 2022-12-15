@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
+import 'package:saveshamo/widgets/whislist_card.dart';
 
 class WishlistPage extends StatelessWidget {
   @override
@@ -79,14 +80,24 @@ class WishlistPage extends StatelessWidget {
 
     Widget content() {
       return Expanded(
-        child: Container(),
+        child: Container(
+          color: backgroundColor3,
+          child: ListView(
+            children: [
+              WhislistCard(),
+              WhislistCard(),
+              WhislistCard(),
+            ],
+          ),
+        ),
       );
     }
 
     return Column(
       children: [
         header(),
-        emptyWishlist(),
+        // emptyWishlist(),
+        content(),
       ],
     );
   }
