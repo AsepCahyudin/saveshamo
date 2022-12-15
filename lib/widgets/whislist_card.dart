@@ -18,6 +18,17 @@ class WhislistCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: backgroundColor4,
       ),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              'assets/Image_Shoes.png',
+              width: 60,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

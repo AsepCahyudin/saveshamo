@@ -83,6 +83,9 @@ class WishlistPage extends StatelessWidget {
         child: Container(
           color: backgroundColor3,
           child: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
             children: [
               WhislistCard(),
               WhislistCard(),
