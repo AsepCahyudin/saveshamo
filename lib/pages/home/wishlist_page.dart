@@ -57,8 +57,18 @@ class WishlistPage extends StatelessWidget {
                       vertical: 10,
                       horizontal: 24,
                     ),
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
-                  child: Text('Explore Store'),
+                  child: Text(
+                    'Explore Store',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: medium,
+                    ),
+                  ),
                 ),
               ),
             ],
