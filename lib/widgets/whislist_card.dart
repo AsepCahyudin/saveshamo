@@ -27,6 +27,30 @@ class WhislistCard extends StatelessWidget {
               width: 60,
             ),
           ),
+          SizedBox(
+            width: 12,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Terrex Urban Low',
+                  style: primaryTextStyle.copyWith(
+                    fontWeight: semiBold,
+                  ),
+                ),
+                Text(
+                  '\$145,67',
+                  style: priceTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Image.asset(
+            'assets/Whislist_Button_Blue.png',
+            width: 34,
+          ),
         ],
       ),
     );
