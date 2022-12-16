@@ -56,6 +56,25 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
+    Widget menuItem(String text) {
+      return Container(
+        margin: EdgeInsets.only(top: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              text,
+              style: secondaryTextStyle.copyWith(fontSize: 13),
+            ),
+            Icon(
+              Icons.chevron_right,
+              color: primaryTextColor,
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget content() {
       return Expanded(
         child: Container(
@@ -78,6 +97,15 @@ class ProfilePage extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: semiBold,
                 ),
+              ),
+              menuItem(
+                'Edit Profile',
+              ),
+              menuItem(
+                'Your Orders',
+              ),
+              menuItem(
+                'Help',
               ),
             ],
           ),
