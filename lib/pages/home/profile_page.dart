@@ -107,6 +107,25 @@ class ProfilePage extends StatelessWidget {
               menuItem(
                 'Help',
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'General',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+              menuItem(
+                'Privacy & Policy',
+              ),
+              menuItem(
+                'Term of Service',
+              ),
+              menuItem(
+                'Rate App',
+              ),
             ],
           ),
         ),
