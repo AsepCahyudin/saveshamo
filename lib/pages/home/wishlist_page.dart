@@ -99,8 +99,8 @@ class WishlistPage extends StatelessWidget {
     return Column(
       children: [
         header(),
-        // emptyWishlist(),
-        content(),
+        emptyWishlist(),
+        // content(),
       ],
     );
   }
