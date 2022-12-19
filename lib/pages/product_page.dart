@@ -41,7 +41,12 @@ class ProductPage extends StatelessWidget {
           CarouselSlider(
             items: images
                 .map(
-                  (image) => Image.asset(image),
+                  (image) => Image.asset(
+                    image,
+                    width: MediaQuery.of(context).size.width,
+                    height: 310,
+                    fit: BoxFit.cover,
+                  ),
                 )
                 .toList(),
             options: CarouselOptions(),
