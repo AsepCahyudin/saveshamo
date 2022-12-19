@@ -1,7 +1,14 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 
 class ProductPage extends StatelessWidget {
+  List images = [
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -30,6 +37,14 @@ class ProductPage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          CarouselSlider(
+            items: images
+                .map(
+                  (image) => Image.asset(image),
+                )
+                .toList(),
+            options: CarouselOptions(),
           ),
         ],
       );
