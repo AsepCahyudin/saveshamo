@@ -95,11 +95,27 @@ class _ProductPageState extends State<ProductPage> {
       );
     }
 
+    Widget content() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 17),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(24),
+            ),
+            color: backgroundColor1),
+        child: Column(
+          children: [],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor6,
       body: ListView(
         children: [
           header(),
+          content(),
         ],
       ),
     );
