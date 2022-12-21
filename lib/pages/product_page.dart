@@ -172,6 +172,37 @@ class _ProductPageState extends State<ProductPage> {
                 ],
               ),
             ),
+
+            // NOTE: DESCRIPTION
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                top: defaultMargin,
+                left: defaultMargin,
+                right: defaultMargin,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Description',
+                    style: primaryTextStyle.copyWith(
+                      fontWeight: medium,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    'deskripsi lengkap',
+                    style: subtitleTextStyle.copyWith(
+                      fontWeight: light,
+                    ),
+                    textAlign: TextAlign.justify,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       );
