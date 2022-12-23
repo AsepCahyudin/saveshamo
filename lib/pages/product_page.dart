@@ -202,7 +202,31 @@ class _ProductPageState extends State<ProductPage> {
                   )
                 ],
               ),
-            )
+            ),
+
+            //NOTE: FAMILIAR SHOES
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                top: defaultMargin,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: defaultMargin,
+                    ),
+                    child: Text(
+                      'Familiar Shoes',
+                      style: primaryTextStyle.copyWith(
+                        fontWeight: medium,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       );
