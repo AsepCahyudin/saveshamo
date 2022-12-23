@@ -14,6 +14,18 @@ class _ProductPageState extends State<ProductPage> {
     'assets/Image_Shoes.png',
   ];
 
+  List familiarShoes = [
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+    'assets/Image_Shoes.png',
+  ];
+
   int currentIndex = 0;
 
   @override
@@ -28,6 +40,21 @@ class _ProductPageState extends State<ProductPage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: currentIndex == index ? primaryColor : Color(0xffC4C4C4),
+        ),
+      );
+    }
+
+    Widget familiarShoesCard(String imageUrl) {
+      return Container(
+        width: 54,
+        height: 54,
+        margin: EdgeInsets.only(
+          right: 16,
+        ),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(imageUrl),
+          ),
         ),
       );
     }
@@ -222,6 +249,19 @@ class _ProductPageState extends State<ProductPage> {
                       style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: familiarShoes
+                          .map(
+                            (image) => familiarShoesCard(image),
+                          )
+                          .toList(),
                     ),
                   )
                 ],
