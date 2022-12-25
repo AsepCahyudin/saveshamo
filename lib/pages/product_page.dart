@@ -164,11 +164,18 @@ class _ProductPageState extends State<ProductPage> {
                       ],
                     ),
                   ),
-                  Image.asset(
-                    isWishlist
-                        ? 'assets/Whislist_Button_Blue.png'
-                        : 'assets/Whislist_Button.png',
-                    width: 46,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isWishlist = !isWishlist;
+                      });
+                    },
+                    child: Image.asset(
+                      isWishlist
+                          ? 'assets/Whislist_Button_Blue.png'
+                          : 'assets/Whislist_Button.png',
+                      width: 46,
+                    ),
                   ),
                 ],
               ),
