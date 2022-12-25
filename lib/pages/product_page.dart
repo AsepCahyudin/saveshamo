@@ -27,6 +27,7 @@ class _ProductPageState extends State<ProductPage> {
   ];
 
   int currentIndex = 0;
+  bool isWishlist = false;
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +165,9 @@ class _ProductPageState extends State<ProductPage> {
                     ),
                   ),
                   Image.asset(
-                    'assets/Whislist_Button.png',
+                    isWishlist
+                        ? 'assets/Whislist_Button_Blue.png'
+                        : 'assets/Whislist_Button.png',
                     width: 46,
                   ),
                 ],
