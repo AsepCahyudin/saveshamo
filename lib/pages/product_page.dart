@@ -44,11 +44,32 @@ class _ProductPageState extends State<ProductPage> {
             content: SingleChildScrollView(
               child: Column(
                 children: [
-                  Icon(
-                    Icons.close,
-                    color: primaryTextColor,
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.close,
+                        color: primaryTextColor,
+                      ),
+                    ),
                   ),
-                  Image.asset('assets/Success_Icon.png'),
+                  Image.asset(
+                    'assets/Success_Icon.png',
+                    width: 100,
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    'Hurray :)',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: semiBold,
+                    ),
+                  ),
                 ],
               ),
             ),
