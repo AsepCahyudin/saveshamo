@@ -70,6 +70,36 @@ class _ProductPageState extends State<ProductPage> {
                       fontWeight: semiBold,
                     ),
                   ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    'Item addes successfully',
+                    style: secondaryTextStyle,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    width: 154,
+                    height: 44,
+                    child: TextButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        'View My Cart',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -353,19 +383,24 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            //NOTE: BUTTON
+            //NOTE: BUTTONS
             Container(
               width: double.infinity,
               margin: EdgeInsets.all(defaultMargin),
               child: Row(
                 children: [
-                  Container(
-                    width: 54,
-                    height: 54,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/Button_Chat.png',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/detail-chat');
+                    },
+                    child: Container(
+                      width: 54,
+                      height: 54,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/Button_Chat.png',
+                          ),
                         ),
                       ),
                     ),
