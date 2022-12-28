@@ -36,21 +36,67 @@ class CartCard extends StatelessWidget {
                 width: 12,
               ),
               Expanded(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Terrex Urban Low',
+                      style: primaryTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    Text(
+                      '\$154,87',
+                      style: priceTextStyle,
+                    ),
+                  ],
+                ),
+              ),
+              Column(
                 children: [
+                  Image.asset(
+                    'assets/Plus_Button.png',
+                    width: 16,
+                  ),
+                  SizedBox(
+                    height: 2,
+                  ),
                   Text(
-                    'Terrex Urban Low',
+                    '2',
                     style: primaryTextStyle.copyWith(
-                      fontWeight: semiBold,
+                      fontWeight: medium,
                     ),
                   ),
-                  Text(
-                    '\$154,87',
-                    style: priceTextStyle,
+                  SizedBox(
+                    height: 2,
+                  ),
+                  Image.asset(
+                    'assets/Min_Button.png',
+                    width: 16,
                   ),
                 ],
-              ))
+              )
+            ],
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Row(
+            children: [
+              Image.asset(
+                'assets/Remove.png',
+                width: 10,
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              Text(
+                'Remove',
+                style: alertTextStyle.copyWith(
+                  fontSize: 12,
+                  fontWeight: light,
+                ),
+              ),
             ],
           )
         ],
