@@ -42,11 +42,16 @@ class CartPage extends StatelessWidget {
               style: secondaryTextStyle,
             ),
             Container(
+              width: 154,
+              height: 44,
               margin: EdgeInsets.only(
                 top: 20,
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/home', (route) => false);
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
