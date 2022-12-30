@@ -84,6 +84,29 @@ class CartPage extends StatelessWidget {
       );
     }
 
+    Widget customBottomNav() {
+      return Container(
+        height: 165,
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: defaultMargin,
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Subtotal',
+                    style: primaryTextStyle,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor3,
       appBar: header(),
