@@ -94,13 +94,28 @@ class CartPage extends StatelessWidget {
                 horizontal: defaultMargin,
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Subtotal',
                     style: primaryTextStyle,
                   ),
+                  Text(
+                    '\$287, 97',
+                    style: priceTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Divider(
+              thickness: 1,
+              color: subtitleColor,
             ),
           ],
         ),
@@ -111,6 +126,7 @@ class CartPage extends StatelessWidget {
       backgroundColor: backgroundColor3,
       appBar: header(),
       body: content(),
+      bottomNavigationBar: customBottomNav(),
     );
   }
 }
