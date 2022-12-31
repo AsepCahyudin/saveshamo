@@ -41,7 +41,31 @@ class CheckoutPage extends StatelessWidget {
                 CheckoutCard(),
               ],
             ),
-          )
+          ),
+
+          // NOTED: ADDRESS DETAILS
+          Container(
+            margin: EdgeInsets.only(
+              top: defaultMargin,
+            ),
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: backgroundColor4,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Address Details',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: medium,
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       );
     }
