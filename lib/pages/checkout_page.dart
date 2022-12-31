@@ -83,6 +83,43 @@ class CheckoutPage extends StatelessWidget {
                           width: 40,
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Store Location',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                            fontWeight: light,
+                          ),
+                        ),
+                        Text(
+                          'Adidas Core',
+                          style: primaryTextStyle.copyWith(
+                            fontWeight: medium,
+                          ),
+                        ),
+                        SizedBox(
+                          height: defaultMargin,
+                        ),
+                        Text(
+                          'Your Address',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                            fontWeight: light,
+                          ),
+                        ),
+                        Text(
+                          'Marsemoon',
+                          style: primaryTextStyle.copyWith(
+                            fontWeight: medium,
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 )
