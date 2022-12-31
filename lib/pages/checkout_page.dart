@@ -62,6 +62,29 @@ class CheckoutPage extends StatelessWidget {
                     fontSize: 16,
                     fontWeight: medium,
                   ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Store_Location.png',
+                          width: 40,
+                        ),
+                        Image.asset(
+                          'assets/Icon_Line.png',
+                          height: 30,
+                        ),
+                        Image.asset(
+                          'assets/Your_Address.png',
+                          width: 40,
+                        ),
+                      ],
+                    )
+                  ],
                 )
               ],
             ),
