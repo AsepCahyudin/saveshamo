@@ -166,6 +166,46 @@ class CheckoutPage extends StatelessWidget {
                       ),
                     )
                   ],
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Product Price',
+                      style: secondaryTextStyle.copyWith(
+                        fontSize: 12,
+                      ),
+                    ),
+                    Text(
+                      '\$543,45',
+                      style: priceTextStyle.copyWith(
+                        fontWeight: medium,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Shipping ',
+                      style: secondaryTextStyle.copyWith(
+                        fontSize: 12,
+                      ),
+                    ),
+                    Text(
+                      'Free',
+                      style: primaryTextStyle.copyWith(
+                        fontWeight: medium,
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
