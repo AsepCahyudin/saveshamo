@@ -131,6 +131,7 @@ class CheckoutPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(
               top: defaultMargin,
+              bottom: defaultMargin,
             ),
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
@@ -181,10 +182,10 @@ class CheckoutPage extends StatelessWidget {
                     ),
                     Text(
                       '\$543,45',
-                      style: priceTextStyle.copyWith(
+                      style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -204,9 +205,35 @@ class CheckoutPage extends StatelessWidget {
                       style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Divider(
+                  thickness: 1,
+                  color: Color(0xff2E3141),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Total',
+                      style: priceTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    Text(
+                      '\$543,45',
+                      style: priceTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
