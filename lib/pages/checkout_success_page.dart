@@ -11,11 +11,46 @@ class CheckoutSuccessPage extends StatelessWidget {
         title: Text(
           'Checkout Success',
         ),
+        elevation: 0,
+      );
+    }
+
+    Widget content() {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/Empty_Cart_Icon.png',
+              width: 80,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'You made a transaction',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Text(
+              'Stay at home while we\n prepare your dream shoes',
+              style: secondaryTextStyle,
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       );
     }
 
     return Scaffold(
+      backgroundColor: backgroundColor3,
       appBar: header(),
+      body: content(),
     );
   }
 }
