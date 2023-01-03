@@ -42,6 +42,55 @@ class CheckoutSuccessPage extends StatelessWidget {
               style: secondaryTextStyle,
               textAlign: TextAlign.center,
             ),
+            Container(
+              width: 196,
+              height: 44,
+              margin: EdgeInsets.only(
+                top: defaultMargin,
+              ),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/home', (route) => false);
+                },
+                style: TextButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text(
+                  'Order Other Shoes',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: 196,
+              height: 44,
+              margin: EdgeInsets.only(
+                top: 12,
+              ),
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: Color(0xff39374B),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text(
+                  'View My Order',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       );
