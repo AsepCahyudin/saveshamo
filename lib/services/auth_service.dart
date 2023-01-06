@@ -1,18 +1,18 @@
 import 'dart:convert';
 
 import 'package:saveshamo/models/user_model.dart';
+import 'package:http/http.dart';
 
 class AuthService{
 
   String baseUrl = 'https:shamo-backend.buildwithangga.id/api';
   
-  get http => null;
 
   Future<UserModel> register({
-    required String name, 
-    required String username,
-    required String email,
-    required String password,
+    String? name, 
+    String? String username,
+    String? String email,
+    String? String password,
   }) async {
     var url ='$baseUrl/register';
     var headers = {'Content-Type': 'application/json'};
@@ -36,7 +36,7 @@ class AuthService{
 
       return user;
     } else {
-      throw Exception('gagal');
+      throw Exception('gagal register');
     }
-  },
+  }
 }
