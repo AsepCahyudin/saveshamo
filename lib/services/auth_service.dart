@@ -21,10 +21,16 @@ class AuthService {
       'password': password,
     });
 
-    var response =
-        await http.post(Uri.parse(url), headers: headers, body: body);
+    var response = await http.post(
+      Uri.parse(url),
+      headers: headers,
+      body: body,
+    );
+
+    print(response.body);
 
     if (response.statusCode == 200) {
+      print('200');
       var data = jsonDecode(response.body)['data'];
       UserModel user = UserModel.fromJson(data['user']);
       user.token = 'Bearer ' + data['access_token'];
