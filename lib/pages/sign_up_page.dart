@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:saveshamo/providers/auth_provider.dart';
 import 'package:saveshamo/theme.dart';
+import 'package:saveshamo/widgets/loading_button.dart';
 
 class SignUpPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController(text: '');
@@ -234,6 +235,7 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget signUpButton() {
+      return LoadingButton();
       return Container(
         height: 50,
         width: double.infinity,
