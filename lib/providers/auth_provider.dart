@@ -28,6 +28,7 @@ class AuthProvider with ChangeNotifier {
       );
 
       _user = user;
+      print('masuk auth service true');
       return true;
     } catch (e) {
       // ignore: avoid_print
