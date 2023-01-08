@@ -20,6 +20,7 @@ class SignUpPage extends StatelessWidget {
         email: emailController.text,
         password: passwordController.text,
       )) {
+        print('home');
         Navigator.pushNamed(context, '/home');
       }
     }

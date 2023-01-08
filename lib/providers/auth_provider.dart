@@ -19,6 +19,7 @@ class AuthProvider with ChangeNotifier {
     String password,
   }) async {
     try {
+      print('masuk auth service');
       UserModel user = await AuthService().register(
         name: name,
         username: username,
