@@ -47,9 +47,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: NetworkImage(
-                    user.profilePhotoUrl,
-                  ),
+                  image: AssetImage('assets/Image_Profile.png'),
                 ),
               ),
             )
