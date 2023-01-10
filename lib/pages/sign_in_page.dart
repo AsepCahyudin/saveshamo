@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:saveshamo/theme.dart';
+import 'package:saveshamo/providers/auth_provider.dart';
 import 'package:saveshamo/widgets/loading_button.dart';
 
 class SignInPage extends StatefulWidget {
