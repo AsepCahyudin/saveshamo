@@ -11,6 +11,7 @@ import 'package:saveshamo/pages/sign_in_page.dart';
 import 'package:saveshamo/pages/sign_up_page.dart';
 import 'package:saveshamo/pages/splash_page.dart';
 import 'package:saveshamo/providers/auth_provider.dart';
+import 'package:saveshamo/providers/product_provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => AuthProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
         ),
       ],
       child: MaterialApp(
