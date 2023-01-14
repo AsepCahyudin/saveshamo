@@ -192,7 +192,7 @@ class HomePage extends StatelessWidget {
               Row(
                 children: productProvider.products
                     .map(
-                      (product) => ProductCard(),
+                      (product) => ProductCard(product),
                     )
                     .toList(),
               ),

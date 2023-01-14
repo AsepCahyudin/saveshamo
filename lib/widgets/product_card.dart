@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:saveshamo/models/product_model.dart';
 import 'package:saveshamo/theme.dart';
 
 class ProductCard extends StatelessWidget {
+  final ProductModel product;
+  ProductCard(this.product);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
