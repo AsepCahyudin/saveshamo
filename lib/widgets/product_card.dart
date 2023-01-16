@@ -26,21 +26,21 @@ class ProductCard extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            // Image.asset(
-            //   'assets/Image_Shoes.png',
-            //   width: 215,
-            //   height: 150,
-            //   fit: BoxFit.cover,
-            // ),
-            product.galleries[0].url != null
-                ? Image.network(
-                    product.galleries[0].url,
-                    width: 64,
-                  )
-                : Image.asset(
-                    'assets/Image_Shoes.png',
-                    width: 64,
-                  ),
+            Image.asset(
+              '${product.galleries[0].url}',
+              width: 215,
+              height: 150,
+              fit: BoxFit.cover,
+            ),
+            // product.galleries[0].url != null
+            //     ? Image.network(
+            //         product.galleries[0].url,
+            //         width: 64,
+            //       )
+            //     : Image.asset(
+            //         'assets/Image_Shoes.png',
+            //         width: 64,
+            //       ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
