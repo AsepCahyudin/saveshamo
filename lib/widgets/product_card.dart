@@ -27,7 +27,7 @@ class ProductCard extends StatelessWidget {
               height: 30,
             ),
             Image.network(
-              'http://10.0.2.2/save-shamo-be/storage/gallery/2-1.png',
+              product.galleries[0].url,
               width: 215,
               height: 150,
               fit: BoxFit.cover,
