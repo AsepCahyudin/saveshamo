@@ -26,8 +26,8 @@ class ProductCard extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Image.asset(
-              '${product.galleries[0].url}',
+            Image.network(
+              'http://10.0.2.2/save-shamo-be/storage/gallery/2-1.png',
               width: 215,
               height: 150,
               fit: BoxFit.cover,
@@ -47,7 +47,7 @@ class ProductCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    product.category.name,
+                    '${product.category.name}',
                     style: secondaryTextStyle.copyWith(fontSize: 12),
                   ),
                   SizedBox(
