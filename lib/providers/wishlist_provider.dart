@@ -10,4 +10,22 @@ class WishlistProvider with ChangeNotifier {
     _wishlist = wishlist;
     notifyListeners();
   }
+
+  setProduct(ProductModel product) {
+    if (!isWhislist(product)) {
+      _wishlist.add(product);
+    } else {
+      _wishlist.removeWhere((element) => element.id == product.id);
+    }
+
+    notifyListeners();
+  }
+
+  isWhislist(ProductModel product) {
+    if (_wishlist.indexWhere((element) => element.id == product.id) == -1) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
