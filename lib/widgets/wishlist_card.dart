@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:saveshamo/theme.dart';
 
-class WhislistCard extends StatelessWidget {
+class WishlistCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
