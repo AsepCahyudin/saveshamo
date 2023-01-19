@@ -20,14 +20,13 @@ class _ProductPageState extends State<ProductPage> {
 
   List familiarShoes = [
     'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
-    'assets/Image_Shoes.png',
+    'assets/Image_Shoes2.png',
+    'assets/Image_Shoes3.png',
+    'assets/Image_Shoes4.png',
+    'assets/Image_Shoes5.png',
+    'assets/Image_Shoes6.png',
+    'assets/Image_Shoes7.png',
+    'assets/Image_Shoes8.png',
   ];
 
   int currentIndex = 0;
