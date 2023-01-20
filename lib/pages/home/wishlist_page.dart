@@ -8,6 +8,7 @@ class WishlistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WishlistProvider wishlistProvider = Provider.of<WishlistProvider>(context);
+
     Widget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
@@ -86,15 +87,14 @@ class WishlistPage extends StatelessWidget {
         child: Container(
           color: backgroundColor3,
           child: ListView(
-            padding: EdgeInsets.symmetric(
-              horizontal: defaultMargin,
-            ),
-            children: wishlistProvider.wishlist
-                .map(
-                  (product) => WishlistCard(),
-                )
-                .toList(),
-          ),
+              padding: EdgeInsets.symmetric(
+                horizontal: defaultMargin,
+              ),
+              children: wishlistProvider.wishlist
+                  .map(
+                    (product) => WishlistCard(product),
+                  )
+                  .toList()),
         ),
       );
     }
