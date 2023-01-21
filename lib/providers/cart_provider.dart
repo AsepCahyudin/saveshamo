@@ -29,6 +29,40 @@ class CartProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  removeCart(int id) {
+    _carts.removeAt(id);
+    notifyListeners();
+  }
+
+  addQuantity(int id) {
+    _carts[id].quantity++;
+    notifyListeners();
+  }
+
+  reduceQuantity(int id) {
+    _carts[id].quantity--;
+    if (_carts[id].quantity == 0) {
+      _carts.removeAt(id);
+    }
+    notifyListeners();
+  }
+
+  totalItems() {
+    int total = 0;
+    for (var item in _carts) {
+      total += item.quantity;
+    }
+    return total;
+  }
+
+  totalPrice() {
+    double total = 0;
+    for (var item in _carts) {
+      total += (item.quantity * item.product.price);
+    }
+    return total;
+  }
+
   productExist(ProductModel product) {
     if (_carts.indexWhere((element) => element.product.id == product.id) ==
         -1) {
