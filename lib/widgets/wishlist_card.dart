@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:saveshamo/models/product_model.dart';
+import 'package:saveshamo/providers/wishlist_provider.dart';
 import 'package:saveshamo/theme.dart';
 import 'package:saveshamo/widgets/wishlist_card.dart';
 
@@ -9,6 +11,7 @@ class WishlistCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WishlistProvider wishlistProvider = Provider.of<WishlistProvider>(context);
     return Container(
       margin: EdgeInsets.only(
         top: 20,
@@ -52,9 +55,14 @@ class WishlistCard extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset(
-            'assets/Whislist_Button_Blue.png',
-            width: 34,
+          GestureDetector(
+            onTap: () {
+              wishlistProvider.setProduct(product);
+            },
+            child: Image.asset(
+              'assets/Whislist_Button_Blue.png',
+              width: 34,
+            ),
           ),
         ],
       ),
