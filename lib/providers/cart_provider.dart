@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:saveshamo/models/card_model.dart';
+import 'package:saveshamo/models/product_model.dart';
 
 class CartProvider with ChangeNotifier {
   List<CartModel> _carts = [];
@@ -9,5 +10,31 @@ class CartProvider with ChangeNotifier {
   set carts(List<CartModel> carts) {
     _carts = carts;
     notifyListeners();
+  }
+
+  addCart(ProductModel product) {
+    if (productExist(product)) {
+      int index =
+          _carts.indexWhere((element) => element.product.id == product.id);
+      _carts[index].quantity++;
+    } else {
+      _carts.add(
+        CartModel(
+          id: _carts.length,
+          product: product,
+          quantity: 1,
+        ),
+      );
+    }
+    notifyListeners();
+  }
+
+  productExist(ProductModel product) {
+    if (_carts.indexWhere((element) => element.product.id == product.id) ==
+        -1) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
