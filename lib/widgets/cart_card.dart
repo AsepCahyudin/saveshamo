@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:saveshamo/models/card_model.dart';
 import 'package:saveshamo/theme.dart';
 
 class CartCard extends StatelessWidget {
+  final CartModel cart;
+  CartCard(this.cart);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,8 +30,8 @@ class CartCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   image: DecorationImage(
-                    image: AssetImage(
-                      'assets/Image_Shoes.png',
+                    image: NetworkImage(
+                      cart.product.galleries[0].url,
                     ),
                   ),
                 ),
@@ -40,13 +44,13 @@ class CartCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Terrex Urban Low',
+                      cart.product.name,
                       style: primaryTextStyle.copyWith(
                         fontWeight: semiBold,
                       ),
                     ),
                     Text(
-                      '\$154,87',
+                      '\$${cart.product.price}',
                       style: priceTextStyle,
                     ),
                   ],
@@ -62,7 +66,7 @@ class CartCard extends StatelessWidget {
                     height: 2,
                   ),
                   Text(
-                    '2',
+                    cart.quantity.toString(),
                     style: primaryTextStyle.copyWith(
                       fontWeight: medium,
                     ),
