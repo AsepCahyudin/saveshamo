@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:saveshamo/models/card_model.dart';
+import 'package:saveshamo/providers/cart_provider.dart';
 import 'package:saveshamo/theme.dart';
 
 class CartCard extends StatelessWidget {
@@ -8,6 +10,8 @@ class CartCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CartProvider cartProvider = Provider.of<CartProvider>(context);
+
     return Container(
       margin: EdgeInsets.only(
         top: defaultMargin,
@@ -58,9 +62,14 @@ class CartCard extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Image.asset(
-                    'assets/Plus_Button.png',
-                    width: 16,
+                  GestureDetector(
+                    onTap: () {
+                      cartProvider.addQuantity(cart.id);
+                    },
+                    child: Image.asset(
+                      'assets/Plus_Button.png',
+                      width: 16,
+                    ),
                   ),
                   SizedBox(
                     height: 2,
@@ -74,9 +83,14 @@ class CartCard extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
-                  Image.asset(
-                    'assets/Min_Button.png',
-                    width: 16,
+                  GestureDetector(
+                    onTap: () {
+                      cartProvider.reduceQuantity(cart.id);
+                    },
+                    child: Image.asset(
+                      'assets/Min_Button.png',
+                      width: 16,
+                    ),
                   ),
                 ],
               )
