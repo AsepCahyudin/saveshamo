@@ -101,9 +101,14 @@ class CartCard extends StatelessWidget {
           ),
           Row(
             children: [
-              Image.asset(
-                'assets/Remove.png',
-                width: 10,
+              GestureDetector(
+                onTap: () {
+                  cartProvider.removeCart(cart.id);
+                },
+                child: Image.asset(
+                  'assets/Remove.png',
+                  width: 10,
+                ),
               ),
               SizedBox(
                 width: 4,
