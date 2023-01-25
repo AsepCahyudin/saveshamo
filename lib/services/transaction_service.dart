@@ -14,15 +14,20 @@ class TransactionService {
       'Authorization': token,
     };
     var body = jsonEncode(
-      'address': 'Saturnus',
-      'items': carts.map(cart) => {
-        'id': cart.product.id,
-        'quantity': cart.quantity,
+      {
+        'address': 'Bandung',
+        'items': carts
+            .map(
+              (cart) => {
+                'id': cart.product.id,
+                'quantity': cart.quantity,
+              },
+            )
+            .toList(),
+        'status': 'PENDING',
+        'total_price': totalPrice,
+        'shipping_price': 0,
       },
-    )toList(),
-    'status': 'PENDING',
-    'total_price': totalPrice,
-    'shipping_price': 0,
-  },
-  );
+    );
+  }
 }
