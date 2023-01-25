@@ -7,7 +7,14 @@ import 'package:saveshamo/providers/transaction_provider.dart';
 import 'package:saveshamo/theme.dart';
 import 'package:saveshamo/widgets/checkout_card.dart';
 
-class CheckoutPage extends StatelessWidget {
+class CheckoutPage extends StatefulWidget {
+  @override
+  State<CheckoutPage> createState() => _CheckoutPageState();
+}
+
+class _CheckoutPageState extends State<CheckoutPage> {
+  bool isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     CartProvider cartProvider = Provider.of<CartProvider>(context);
@@ -16,6 +23,9 @@ class CheckoutPage extends StatelessWidget {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
 
     handleCheckout() async {
+      setState(() {
+        isLoading = true;
+      });
       if (await transactionProvider.checkout(
         authProvider.user.token,
         cartProvider.carts,
@@ -25,6 +35,10 @@ class CheckoutPage extends StatelessWidget {
         Navigator.pushNamedAndRemoveUntil(
             context, '/checkout-success', (route) => false);
       }
+
+      setState(() {
+        isLoading = false;
+      });
     }
 
     PreferredSizeWidget header() {
