@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:saveshamo/models/card_model.dart';
+import 'package:saveshamo/providers/auth_provider.dart';
 import 'package:saveshamo/providers/cart_provider.dart';
+import 'package:saveshamo/providers/transaction_provider.dart';
 import 'package:saveshamo/theme.dart';
 import 'package:saveshamo/widgets/checkout_card.dart';
 
@@ -9,6 +11,22 @@ class CheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CartProvider cartProvider = Provider.of<CartProvider>(context);
+    TransactionProvider transactionProvider =
+        Provider.of<TransactionProvider>(context);
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+
+    handleCheckout() async {
+      if (await transactionProvider.checkout(
+        authProvider.user.token,
+        cartProvider.carts,
+        cartProvider.totalPrice(),
+      )) {
+        cartProvider.carts = [];
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/checkout-success', (route) => false);
+      }
+    }
+
     PreferredSizeWidget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
@@ -262,10 +280,7 @@ class CheckoutPage extends StatelessWidget {
               vertical: defaultMargin,
             ),
             child: TextButton(
-              onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, '/checkout-success', (route) => false);
-              },
+              onPressed: handleCheckout,
               style: TextButton.styleFrom(
                 backgroundColor: primaryColor,
                 shape: RoundedRectangleBorder(
