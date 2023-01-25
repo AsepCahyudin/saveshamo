@@ -6,7 +6,7 @@ import '../models/card_model.dart';
 class TransactionService {
   String baseUrl = 'http://10.0.2.2:8000/api';
 
-  Future checkout(
+  Future<bool> checkout(
       String token, List<CartModel> carts, double totalPrice) async {
     var url = '$baseUrl/checkout';
     var headers = {
@@ -29,5 +29,19 @@ class TransactionService {
         'shipping_price': 0,
       },
     );
+
+    var response = await http.post(
+      url,
+      headers: headers,
+      body: body,
+    );
+
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      throw Exception('Gagal Melakukan Checkout!');
+    }
   }
 }
