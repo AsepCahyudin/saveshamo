@@ -14,6 +14,7 @@ class ProductService {
     print(response.body);
 
     if (response.statusCode == 200) {
+      print('sukses data produk');
       List data = jsonDecode(response.body)['data']['data'];
       List<ProductModel> products = [];
 
